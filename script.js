@@ -29,7 +29,6 @@ search.addEventListener('click',async() =>{
         const inp = city.value;
         const info = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${inp}`)
         const response = await info.json();
-        console.log(response)
         uname.innerText = await response.location.name;
         region.innerText =await "("+response.location.region+")";
         temp.innerText =await response.current.temp_c + "C";
