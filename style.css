@@ -1,0 +1,90 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: 'steph';
+    src: url(fonts/steph-font.ttf);
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Images/Abstract\ Landscape\ Minimalist\ Brown.jpg);
+    background-size: cover;
+}
+.container{
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.252);
+    backdrop-filter: blur(7px);
+}
+.heading{
+    color: #7C98B3;
+    font-family: 'steph';
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+.input{
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.input input{
+    font-family: 'steph';
+    font-size: 1.4rem;
+    background-color: rgba(255, 255, 255, 0.444);
+    text-align: center;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:5px ;
+}
+.input input:hover{
+    background-color: rgba(128, 128, 128, 0.267);
+}
+.input button{
+    cursor: pointer;
+    font-family: 'steph';
+    font-size: 1.4rem;
+    color: rgb(142, 207, 142);
+    background-color: rgba(255, 255, 255, 0.444);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 34px;
+    width: auto;
+}
+.input button:hover{
+    background-color: rgba(128, 128, 128, 0.267);
+    color: blue;
+}
+.content{
+    font-family: 'steph';
+    font-size: 1.5rem;
+    margin: 2rem;
+    display: flex;
+    gap: 3rem;
+    color: #000000;
+}
+.check{
+    font-size: 3rem;
+    font-family: 'steph';
+}
+.logo img{
+    margin-top: 40%;
+    height: 15vh;
+}
+.info h2{
+    font-size: 5rem;
+}
+.info p,h2,h3{
+
+    margin-bottom: 30px;
+}
+.hide{
+    display: none;
+}
+
