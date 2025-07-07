@@ -1,6 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    border-sizing : border-box;
 }
 @font-face {
     font-family: 'steph';
@@ -33,33 +34,36 @@
     display: flex;
     justify-content: center;
     align-items: center;    
+    gap: 1rem;
 }
 .input input{
-    font-family: 'steph';
+    font-family: 'steph';   
     font-size: 1.4rem;
     background-color: rgba(255, 255, 255, 0.444);
     text-align: center;
     height: 30px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius:5px ;
+    border: 1px solid gray;
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.167);
 }
 .input input:hover{
-    background-color: rgba(128, 128, 128, 0.267);
+    background-color: rgba(128, 128, 128, 0.400);
 }
-.input button{
+.input button{  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
     cursor: pointer;
+    border: 1px solid gray;
     font-family: 'steph';
     font-size: 1.4rem;
-    color: rgb(142, 207, 142);
-    background-color: rgba(255, 255, 255, 0.444);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 34px;
+    color: rgb(249, 249, 249);
+    background-color:  rgb(124, 138, 154);
+    border-radius: 5px;
+    height: 34px; 
     width: auto;
 }
 .input button:hover{
-    background-color: rgba(128, 128, 128, 0.267);
-    color: blue;
+    background-color: rgb(128, 128, 128);
+    color: rgb(255, 255, 255);
 }
 .content{
     font-family: 'steph';
