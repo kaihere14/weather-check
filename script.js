@@ -10,15 +10,22 @@ const region = document.querySelector('.info p')
 
 const key = 'cacbac3cade44a42880141541250707';
 
+city.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        search.click();
+    }
+});
+
 search.addEventListener('click',async() =>{
     check.innerText = "Checking Weather..."
      const inp = city.value;
      if(inp == ''){
+        check.innerText = "Checking Weather..."
         content.classList.add('hide')
         check.classList.remove('hide')
         check.innerText = "PLease Enter Valid Text!!!"
      }else{try{
-
+        check.innerText = "Checking Weather..."
         const inp = city.value;
         const info = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${inp}`)
         const response = await info.json();
