@@ -7,14 +7,32 @@ const logo = document.querySelector('.logo img');
 const check = document.querySelector('.check');
 const content = document.querySelector('.content')
 const region = document.querySelector('.info p')
+const notaion = document.querySelector('.heading i')
 
+let count = 0;
 const key = 'cacbac3cade44a42880141541250707';
+
+notaion.addEventListener('click',()=>{
+    if(count == 0){
+        notaion.classList.add("fa-f")
+        notaion.classList.remove("fa-c")
+        count = 1;
+    }else if(count == 1){
+       notaion.classList.remove("fa-f")
+       notaion.classList.add("fa-c")
+        count =0;
+    }
+    search.click();
+
+})
 
 city.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         search.click();
     }
 });
+
+
 
 search.addEventListener('click',async() =>{
     check.innerText = "Checking Weather..."
@@ -31,7 +49,11 @@ search.addEventListener('click',async() =>{
         const response = await info.json();
         uname.innerText = await response.location.name;
         region.innerText =await "("+response.location.region+")";
+        if(count ==0){
         temp.innerText =await response.current.temp_c + "C";
+        }else if(count ==1){
+            temp.innerText =await response.current.temp_f + "F";
+        }
         cloud.innerText =await response.current.condition.text;
         logo.src =await response.current.condition.icon;
         content.classList.remove('hide')

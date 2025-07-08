@@ -16,18 +16,38 @@
     background-image: url(Images/Abstract\ Landscape\ Minimalist\ Brown.jpg);
     background-size: cover;
 }
+
 .container{
     text-align: center;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.252);
+    background-color: rgba(249, 249, 249, 0.557);
     backdrop-filter: blur(7px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.703);
 }
 .heading{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     color: #7C98B3;
     font-family: 'steph';
     font-weight: bolder;
     font-size: 1.5rem;
     margin: 10px;
+}
+.heading i {
+    text-align: center;
+     background-color:  rgb(124, 138, 154);
+     color: rgb(249, 249, 249);
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    padding-top: 2px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.heading i:hover{
+    background-color: gray;
 }
 .input{
     margin-bottom: 4rem;
