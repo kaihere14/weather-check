@@ -46,9 +46,9 @@ todesktop-ui-clone/
 
 (You can replace these image links with real screenshots)
 
-<a href="#"><img src="https://via.placeholder.com/800x450?text=Home+Desktop+View" alt="Desktop view"/></a>
+<a href="https://beeimg.com/view/a6420106275/"><img src="https://beeimg.com/images/a64201062751.png" alt="a6420106275"/></a>
+<a href="https://beeimg.com/view/y2342035634/"><img src="https://beeimg.com/images/y23420356344.png" alt="y2342035634"/></a>
 
-<hr> <a href="#"><img src="https://via.placeholder.com/400x750?text=Mobile+Menu+View" alt="Mobile menu view"/></a>
 📦 How to Run
 bash
 Copy
