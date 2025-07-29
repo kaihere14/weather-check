@@ -21,7 +21,7 @@ const future = document.querySelector('.future')
 const hr = document.querySelector('.line')
 
 let count = 0;
-const key = 'cacbac3cade44a42880141541250707';
+const key = 'c6f0a902cc644fb5a20193342252907';
 
 notaion.addEventListener('click', () => {
     if (count == 0) {
@@ -59,26 +59,28 @@ search.addEventListener('click', async () => {
             const inp = city.value;
             const info = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${inp}`)
             const response = await info.json();
+            console.log(response)
             const info2 = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${inp}&days=4`)
             const response2 = await info2.json();
-            img1.src = await (response2.forecast.forecastday[1].day.condition.icon);
-            p1.innerText = "(" + await response2.forecast.forecastday[1].date + ")";
-            img2.src = await (response2.forecast.forecastday[2].day.condition.icon);
-            p2.innerText = "(" + await response2.forecast.forecastday[2].date + ")";
-            img3.src = await (response2.forecast.forecastday[3].day.condition.icon);
-            p3.innerText = "(" + await response2.forecast.forecastday[3].date + ")";
+            console.log(response2)
+            img1.src = await (response2.forecast.forecastday[0].day.condition.icon);
+            p1.innerText = "(" + await response2.forecast.forecastday[0].date + ")";
+            img2.src = await (response2.forecast.forecastday[1].day.condition.icon);
+            p2.innerText = "(" + await response2.forecast.forecastday[1].date + ")";
+            img3.src = await (response2.forecast.forecastday[2].day.condition.icon);
+            p3.innerText = "(" + await response2.forecast.forecastday[2].date + ")";
             uname.innerText = await response.location.name;
             region.innerText = await "(" + response.location.region + ")";
             if (count == 0) {
                 temp.innerText = response.current.temp_c + "°C";
-                b1.innerText = response2.forecast.forecastday[1].day.avgtemp_c + "°C";
-                b2.innerText = response2.forecast.forecastday[2].day.avgtemp_c + "°C";
-                b3.innerText = response2.forecast.forecastday[3].day.avgtemp_c + "°C";
+                b1.innerText = response2.forecast.forecastday[0].day.avgtemp_c + "°C";
+                b2.innerText = response2.forecast.forecastday[1].day.avgtemp_c + "°C";
+                b3.innerText = response2.forecast.forecastday[2].day.avgtemp_c + "°C";
             } else if (count == 1) {
                 temp.innerText = response.current.temp_f + "°F";
-                b1.innerText = response2.forecast.forecastday[1].day.avgtemp_f + "°F";
-                b2.innerText = response2.forecast.forecastday[2].day.avgtemp_f + "°F";
-                b3.innerText = response2.forecast.forecastday[3].day.avgtemp_f + "°F";
+                b1.innerText = response2.forecast.forecastday[0].day.avgtemp_f + "°F";
+                b2.innerText = response2.forecast.forecastday[1].day.avgtemp_f + "°F";
+                b3.innerText = response2.forecast.forecastday[2].day.avgtemp_f + "°F";
             }
         cloud.innerText = await response.current.condition.text;
         logo.src = await response.current.condition.icon;

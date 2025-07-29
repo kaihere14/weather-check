@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: 'steph';
-    src: url(fonts/steph-font.ttf);
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 .main{
     height: 100vh;
@@ -18,6 +18,7 @@
 }
 
 .container{
+    padding: œ40px;
     text-align: center;
     border-radius: 20px;
     background-color: rgba(249, 249, 249, 0.557);
@@ -32,7 +33,9 @@
     font-family: 'steph';
     font-weight: bolder;
     font-size: 1.5rem;
-    margin: 10px;
+    /* margin: 10px; */
+    margin-top: 1rem;
+    margin-bottom:0.3rem;
 }
 .heading i {
     text-align: center;
@@ -50,7 +53,7 @@
     background-color: gray;
 }
 .input{
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -87,7 +90,7 @@
 }
 .content{
     font-family: 'steph';
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin: 2rem;
     display: flex;
     gap: 3rem;
@@ -105,13 +108,14 @@
     margin-top: 10px;
 }
 .info h2{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .info p,h2,h3{
 
     margin-top: 4px;
 }
 .future{
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-evenly;
 }
