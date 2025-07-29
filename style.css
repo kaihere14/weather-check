@@ -18,7 +18,7 @@
 }
 
 .container{
-    padding: œ40px;
+    padding: 40px;
     text-align: center;
     border-radius: 20px;
     background-color: rgba(249, 249, 249, 0.557);
@@ -97,7 +97,7 @@
     color: #000000;
 }
 .check{
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'steph';
 }
 .logo img{
